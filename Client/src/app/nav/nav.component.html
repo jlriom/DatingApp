@@ -19,7 +19,7 @@
     </ul>
 
     <div class="btn-group" dropdown *ngIf="(accountService.currentUser$ | async) as user">
-      <img src="{{user.photoUrl}}" alt="{{user.username}}">
+      <img src="{{user.photoUrl || './assets/user.png'}}" alt="{{user.username}}">
       <a class="dropdown-toggle text-light ml-2 mt-2" id="button-basic2" dropdownToggle aria-controls="dropdown-basic2">Welcome {{ user.username | titlecase }}</a>
       <ul id="dropdown-basic2" *dropdownMenu class="dropdown-menu"
           role="menu" aria-labelledby="button-basic2">
