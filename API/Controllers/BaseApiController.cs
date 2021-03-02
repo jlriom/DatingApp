@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using API.Helpers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
     [Route("api/[controller]")]
+    [ServiceFilter(typeof(LogUserActivity))]
     [ApiController]
     public class BaseApiController: ControllerBase
     {
